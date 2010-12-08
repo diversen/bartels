@@ -1,0 +1,306 @@
+#smallfont {
+    font: normal 10px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+#headfont {
+    font: 18px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height:90%;
+    text-transform: uppercase;
+}
+
+#headfont a {
+    font: 18px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height:90%;
+    text-transform: uppercase;
+}
+
+#headfont_small {
+    font: 9px Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#headline {
+    font: 9px Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+#thick_hr {
+    color: #fff;
+    background-color: #fff;
+    height: 3px;
+}
+
+#thin_hr {
+    color: #999;
+    height: 0.1px;
+}
+
+
+html {
+    height: 100%;
+    overflow:scroll;
+    /** for scrollbars hidden use overflow:hidden; */
+}
+
+body {
+    background-color: #000;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    border-top: 1px transparent solid;
+    margin-top: -1px;
+    z-index:0;
+    position:relative;
+    
+}
+
+img#background {
+    margin-left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* position:absolute; */
+    color: white;
+    position: fixed;
+
+}
+content_font {
+    font: normal 12px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+body {
+    font: normal 12px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+#ul_sub {
+    font: normal 10px  "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+.logo_img {
+    width: 50px;
+
+}
+
+p {
+    margin-top: 0px;
+    text-align: left;
+}
+
+h3 {
+    color: #fff;
+}
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* specific divs */
+#page {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+
+#header {
+    margin-bottom: 0px;
+    margin-left: 17%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 15%;
+}
+
+
+#gallery_pager {
+    position: absolute;
+    top: 90%;
+    bottom: 15px;
+}
+
+#search {
+    text-align: right;
+}
+
+#sidebar_top {
+    
+}
+
+#sidebar_cheat {
+    margin-top: 0%;
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    text-align: left;
+    width: 13%;
+    height: 100%;
+    text-transform: uppercase;
+    /* for IE */
+    filter:alpha(opacity=75);
+    /* CSS3 standard */
+    opacity:0.75;
+}
+
+#sidebar_left {
+
+    font: normal 12px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    margin-left: 1%;
+    position: absolute;
+    text-align: left;
+    height: 0%;
+    top: 23%;
+    color: #aaa;
+    text-transform: uppercase;    
+}
+
+.menu {
+
+    text-transform: uppercase;
+    font: bold 12px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #666;
+
+}
+
+
+#sidebar_left ul, li {
+    color: #000;
+    text-align: left;
+    list-style-type: none;
+    padding: 2px;
+    vertical-align:top;
+}
+
+
+#sidebar_left a:link {
+    text-decoration: none;
+    color: rgb(88,89,91);
+}
+#sidebar_left a:visited {
+    text-decoration: none;
+    color: rgb(88,89,91);
+}
+
+
+#sidebar_left a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+#sidebar_left a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+#sidebar_right {
+    background-color: #000;
+    border:1px solid black;
+    /* for IE */
+    filter:alpha(opacity=75);
+    /* CSS3 standard */
+    opacity:0.75;
+    margin-left: 62%;
+    width: 16%;
+    position:absolute;
+    top: 25%;
+    float:right;
+    padding: 1em;
+    color: #fff;
+    
+}
+
+#tabledebug {
+    background-color: #000;
+    border: 1px solid gray;
+}
+
+#tabledebug td, tr {
+    background-color: #000;
+    border: 1px solid gray;
+}
+
+#form_error ul, li {
+    color: #aaa;
+}
+
+#form_confirm {
+    color: #fff;
+}
+
+#system_message {
+    color: #fff;
+}
+
+fieldset {
+    display: block;
+}
+
+label {
+    display: block;
+    float:left;
+}
+
+#module_menu ul {
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    background : #333;
+}
+
+#module_menu li {
+    margin-left: 0px;
+    display: inline;
+    text-transform: uppercase;
+}
+
+code {
+    display:block;
+    background : #000;
+}
+
+img {
+    border-style: none;
+}
+
+
+#footer {
+    text-align: center;
+    clear: both;
+    margin: 0;
+    padding: .5em;
+    font-size: 12px;
+}
+
+#logo_title  {
+    font: bold 400% "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height:90%;
+    text-transform: uppercase;
+
+}
+
+#example1 {
+    color: #ed078f;
+}

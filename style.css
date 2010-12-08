@@ -1,0 +1,38 @@
+.filter  {
+    color: #aaa;
+    padding: 6px 6px 6px 2px;
+    margin-left: 20px;
+    text-align: left;
+    list-style-type:circle;
+    vertical-align:top;
+}
+
+#content {   
+    background-color: #000;
+    border:1px solid black;    
+    margin-left: 17%;
+    width: 38%;
+    top:25%;
+    position: absolute;
+    padding: 1em;
+    background: url("/templates/bartels/trans-black.png");
+    background-repeat: repeat;
+    color: #fff;
+    font: normal 13px Arial, Helvetica, sans-serif;
+}
+
+#content_image {
+     
+    margin: 10px 0px 10px 10px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+#event_image {
+
+    margin: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+
