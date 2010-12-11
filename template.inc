@@ -30,7 +30,7 @@ public static function printHeader(){ ?>
 
 template::setJs("http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js", 10);
 template::setJs("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js", 20);
-template::setJs("/js/fancybox/jquery.fancybox-1.3.3.js");
+template::setJs("/templates/fancybox/jquery.fancybox-1.3.3.js");
 
 echo template::getJs();
 
