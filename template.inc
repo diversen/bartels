@@ -91,7 +91,7 @@ if (!empty(register::$vars['coscms_main']['css'])){
     template::setCss("/templates/bartels/common.css");
 }
 template::setCss('/templates/bartels/style.css?version=17', 1);
-template::setCss('/js/fancybox/jquery.fancybox-1.3.3.css');
+template::setCss('/templates/fancybox/jquery.fancybox-1.3.3.css');
 echo template::getCss();
 
 
