@@ -25,7 +25,7 @@ echo template::$meta;
 
 //$options = array('load_ini_file' => true);
 
-if (isset(register::$vars['coscms_main']['css'])){
+if (!empty(register::$vars['coscms_main']['css'])){
 // if (isset($row['css']) && $row['css'] != ''){
     $css = register::$vars['coscms_main']['css'];
     template::setCss("/templates/bartels/$css");
