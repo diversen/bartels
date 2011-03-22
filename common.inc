@@ -11,7 +11,7 @@ define('MENU_LIST_START', '<ul>');
 define('MENU_LIST_END', '</ul>');
 define('MENU_SUBLIST_START', '<li>');
 define('MENU_SUBLIST_END', '</li>');
-define('MENU_SUB_SEPARATOR', '| ');
+define('MENU_SUB_SEPARATOR', ' | ');
 
 
 function get_form_element_start($name, $title = '&nbsp;'){
