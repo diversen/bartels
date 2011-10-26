@@ -96,7 +96,7 @@ echo template::getCss();
 
 
         include_model ('gallery');
-        $galImg = new galleryImage(false);
+        $galImg = new gallery(false);
 
         if (session::isInSession()){
             if (isset($_SESSION['gallery_count'])){
@@ -117,6 +117,7 @@ echo template::getCss();
 
 ?>
 </head>
+    
 
 <body>
 
@@ -133,10 +134,7 @@ echo template::getCss();
         <div id ="top_blocks">
 <?php
 
-$blocks = layout::getTopBlocks();
-foreach ($blocks as $key => $val){
-    print $val;
-}
+
 
 ?>
         </div>
@@ -147,19 +145,15 @@ foreach ($blocks as $key => $val){
 
 <?php
 
-$blocks = layout::getBlocks();
-foreach ($blocks as $key => $val){
-    print $val;
-}
-
+$blocks = layout::getBlock('blocks');
+            foreach ($blocks as $key => $val){
+                print $val;
+            }
 ?>
     </div>
     <div id="sidebar_right">
         <?php
-        $blocks_sec = layout::getBlocksSec();
-        foreach ($blocks_sec as $key => $val){
-            print $val;
-        }
+        
 
 
         ?>
