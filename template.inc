@@ -79,22 +79,22 @@ $(document).ready(function() {
 
 <?php
 
-echo template::$meta;
+//echo template::setMeta(); //template::$meta;
 
 //$options = array('load_ini_file' => true);
 
 if (!empty(register::$vars['coscms_main']['css'])){
 // if (isset($row['css']) && $row['css'] != ''){
     $css = register::$vars['coscms_main']['css'];
-    template::setCss("/templates/bartels/$css");
+   template::setCss("/templates/bartels/$css");
 } else {
     template::setCss("/templates/bartels/common.css");
 }
-template::setCss('/templates/bartels/style.css?version=17', 1);
-template::setCss('/templates/fancybox/jquery.fancybox-1.3.3.css');
+template::setCss('/templates/bartels/style.css?version=36', 1);
+//template::setCss('/templates/fancybox/jquery.fancybox-1.3.3.css');
 echo template::getCss();
 
-
+/*
         include_model ('gallery');
         $galImg = new gallery(false);
 
@@ -114,7 +114,7 @@ echo template::getCss();
             $_SESSION['gallery_count'] = 0;
             $_SESSION['image_url'] = $galImg->getRandomImageURL();
         }
-
+*/
 ?>
 </head>
     
@@ -126,11 +126,7 @@ echo template::getCss();
     </div>
 <div id="page">
     <div id="header">
-        <?php if (empty(register::$vars['coscms_main']['logo'])) { ?>
-            <div id ="logo_title"><h3><a href="/"><?php echo $_SERVER['HTTP_HOST']?></a></h3></div><?php
-        } else { ?>
-            <div id = "logo_img"><a href="/"><img width ="48%" alt="<?php echo $_SERVER['HTTP_HOST']?>" src="/logo/<?=register::$vars['coscms_main']['logo']?>" /></a></div><?php
-        } ?>
+        <?=template::getLogoHTML(array('width' => '48%')); ?>
         <div id ="top_blocks">
 <?php
 
