@@ -21,7 +21,7 @@ public static function printHeader(){ ?>
 </style>
 <?php
 
-echo template::$meta;
+echo template::getMeta();
 
 //$options = array('load_ini_file' => true);
 
@@ -37,9 +37,8 @@ echo template::getCss();
 
 
 
-
-        include_model ('gallery');
-        $galImg = new galleryImage();
+include_model ('gallery/admin');
+        $galImg = new galleryAdmin();
         if (empty($galImg->fileId)){
             $image_url = $galImg->getRandomImageURL();
         } else {
@@ -48,6 +47,7 @@ echo template::getCss();
                          $show['gallery_id'] . '/' .
                          $show['file_name'];
          }
+
 
 
 
@@ -91,10 +91,6 @@ $(document).ready(function() {
         <div id ="top_blocks">
 <?php
 
-$blocks = layout::getTopBlocks();
-foreach ($blocks as $key => $val){
-    print $val;
-}
 
 ?>
         </div>
@@ -104,23 +100,17 @@ foreach ($blocks as $key => $val){
     <div id="sidebar_left">
 <?php
 
-$blocks = layout::getBlocks();
-foreach ($blocks as $key => $val){
-    print $val;
-}
+$blocks = layout::getBlock('blocks');
+            foreach ($blocks as $key => $val){
+                print $val;
+            }
+
+        ?>
 
 ?>
     </div>
     <!--<div id="sidebar_right">
-        <?php
-        /**
-        $blocks_sec = layout::getBlocksSec();
-        foreach ($blocks_sec as $key => $val){
-            print $val;
-        }
-        */
-
-        ?>
+        
    </div>-->
     <div id="content">
         <div id="module_menu">

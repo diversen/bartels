@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 <?php
 
-//echo template::setMeta(); //template::$meta;
+echo template::getMeta(); //template::$meta;
 
 //$options = array('load_ini_file' => true);
 
@@ -94,9 +94,9 @@ template::setCss('/templates/bartels/style.css?version=36', 1);
 //template::setCss('/templates/fancybox/jquery.fancybox-1.3.3.css');
 echo template::getCss();
 
-/*
+
         include_model ('gallery');
-        $galImg = new gallery(false);
+        //$galImg = new gallery(false);
 
         if (session::isInSession()){
             if (isset($_SESSION['gallery_count'])){
@@ -105,16 +105,16 @@ echo template::getCss();
                 $_SESSION['gallery_count'] = 0;
             }
             if ($_SESSION['gallery_count'] >= 7){
-                $_SESSION['image_url'] = $galImg->getRandomImageURL();
+                $_SESSION['image_url'] = gallery::getRandomImageURL();
                 $_SESSION['gallery_count'] = 0;
                 $_SESSION['galley_image_shift'] = 1;
             }
 
         } else {
             $_SESSION['gallery_count'] = 0;
-            $_SESSION['image_url'] = $galImg->getRandomImageURL();
+            $_SESSION['image_url'] = gallery::getRandomImageURL();
         }
-*/
+
 ?>
 </head>
     
