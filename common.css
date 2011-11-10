@@ -1,32 +1,37 @@
-#smallfont {
+.smallfont {
     font: normal 10px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
     color: #fff;
 }
 
-#headfont {
+.headline {
     font: 18px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
     color: #fff;
     line-height:90%;
     text-transform: uppercase;
 }
 
-#headfont a {
+.headfont a {
     font: 18px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
     color: #fff;
     line-height:90%;
     text-transform: uppercase;
 }
 
-#headfont_small {
+.headfont_small {
     font: 9px Arial, Helvetica, sans-serif;
     color: #fff;
     text-transform: uppercase;
 }
 
-#headline {
-    font: 9px Arial, Helvetica, sans-serif;
-    color: #fff;
-    text-transform: uppercase;
+code {
+    font-size: 90%;
+    color: #aaa;
+    margin: 4px;
+    background: #666;
+}
+
+#content_article {
+    font-size: 120%;
 }
 
 

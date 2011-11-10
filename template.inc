@@ -26,13 +26,19 @@ public static function printHeader(){ ?>
             font-family: "Flama-Semibold";
             src: url(http://<?php echo $_SERVER['HTTP_HOST']; ?>/templates/bartels/Flama-Semibold.otf) format("opentype");
         }
-</style><?php
+</style>
+               <!-- <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/ui-lightness/jquery-ui.css" />-->
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/hot-sneaks/jquery-ui.css" />
 
-template::setJs("http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js", 10);
-template::setJs("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js", 20);
-template::setJs("/templates/fancybox/jquery.fancybox-1.3.3.js");
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
 
-echo template::getJs();
+
+            <?php
+
+
+
+
 
 ?>
 <script type="text/javascript">
@@ -55,26 +61,7 @@ $(document).ready(function() {
 });
 
 </script>
-<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			*   Examples - images
-			*/
 
-			$("a#example1").fancybox({
-				'titleShow'		: false,
-                                'autoScale' : false,
-                                'scrolling' : 'auto',
-                                'autoDimensions' : false,
-                                'width' : "100%",
-                                'centerOnScroll' : true,
-                                'opacity' : false,
-                                'overlayColor' : ''
-			});
-
-			
-		});
-	</script>
 
 
 <?php
@@ -196,6 +183,9 @@ echo template::getEndContent();
 <?php
 
 //echo template::getEndHTML();
+
+echo template::getJs();
+echo template::getInlineJs();
 
 ?>
 </body>
