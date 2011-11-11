@@ -78,7 +78,9 @@ if (!empty(register::$vars['coscms_main']['css'])){
     template::setCss("/templates/bartels/common.css");
 }
 template::setCss('/templates/bartels/style.css?version=36', 1);
-template::setCss('http://fonts.googleapis.com/css?family=Rammetto+One');
+//template::setCss('http://fonts.googleapis.com/css?family=Rammetto+One');
+template::setCss('http://fonts.googleapis.com/css?family=Rancho');
+//http://fonts.googleapis.com/css?family=Butcherman+Caps
 //template::setCss('/templates/fancybox/jquery.fancybox-1.3.3.css');
 echo template::getCss();
 
@@ -114,7 +116,7 @@ echo template::getCss();
     </div>
 <div id="page">
     <div id="header">
-        <?=template::getLogoHTML(array('width' => '48%', 'font' => 0)); ?>
+        <?=template::getLogoHTML(array('width' => '48%', 'font' => 1)); ?>
         <div id ="top_blocks">
 <?php
 
