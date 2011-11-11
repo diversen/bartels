@@ -3,11 +3,16 @@
     color: #fff;
 }
 
-.headline {
-    font: 18px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
+h1 {
+    font: 40px "Flama-Semibold", Verdana, Arial, Helvetica, sans-serif;
     color: #fff;
     line-height:90%;
+
     text-transform: uppercase;
+}
+
+.headline {
+    
 }
 
 .headfont a {

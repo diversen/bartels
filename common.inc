@@ -124,7 +124,7 @@ function view_error($message){
  */
 function headline_message($message){
     echo "<!-- headline_message -->\n";
-    echo "<div class=\"headline\">\n";
+    echo "<h1>\n";
     echo "$message\n";
-    echo "</div>\n";
+    echo "</h1>\n";
 }
