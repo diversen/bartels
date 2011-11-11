@@ -114,7 +114,7 @@ echo template::getCss();
     </div>
 <div id="page">
     <div id="header">
-        <?=template::getLogoHTML(array('width' => '48%', 'font' => 0)); ?>
+        <?=template::getLogoHTML(array('width' => '48%', 'font' => 1)); ?>
         <div id ="top_blocks">
 <?php
 
