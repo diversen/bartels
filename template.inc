@@ -1,5 +1,6 @@
 <?php
 
+template::init('bartels');
 
 class mainTemplate extends template {
 
@@ -66,64 +67,40 @@ $(document).ready(function() {
 
 <?php
 
-echo template::getMeta(); //template::$meta;
+echo template::getMeta();
 
-//$options = array('load_ini_file' => true);
-
-if (!empty(register::$vars['coscms_main']['css'])){
-// if (isset($row['css']) && $row['css'] != ''){
-    $css = register::$vars['coscms_main']['css'];
-   template::setCss("/templates/bartels/$css");
-} else {
-    template::setCss("/templates/bartels/common.css");
-}
-template::setCss('/templates/bartels/style.css?version=36', 1);
-//template::setCss('http://fonts.googleapis.com/css?family=Rammetto+One');
+template::setTemplateCss('bartels');
 template::setCss('http://fonts.googleapis.com/css?family=Rancho');
-//http://fonts.googleapis.com/css?family=Butcherman+Caps
-//template::setCss('/templates/fancybox/jquery.fancybox-1.3.3.css');
 echo template::getCss();
+echo template::getInlineCss();
 
-
-        include_model ('gallery');
-        //$galImg = new gallery(false);
-
-        if (session::isInSession()){
-            if (isset($_SESSION['gallery_count'])){
-                $_SESSION['gallery_count']++;
-            } else {
-                $_SESSION['gallery_count'] = 0;
-            }
-            if ($_SESSION['gallery_count'] >= 7){
-                $_SESSION['image_url'] = gallery::getRandomImageURL();
-                $_SESSION['gallery_count'] = 0;
-                $_SESSION['galley_image_shift'] = 1;
-            }
-
-        } else {
-            $_SESSION['gallery_count'] = 0;
-            $_SESSION['image_url'] = gallery::getRandomImageURL();
-        }
+include_model ('gallery');
+$bg_image = gallery::getShiftingImageURL();
 
 ?>
 </head>
     
 
 <body>
-
     <div id="background">
-<img id="background" src="<?php echo $_SESSION['image_url'];?>" />
+<img id="background" src="<?php echo $bg_image;?>" />
     </div>
 <div id="page">
-    <div id="header">
-        <?=template::getLogoHTML(array('width' => '48%', 'font' => 1)); ?>
-        <div id ="top_blocks">
-<?php
-
-
+    <?php if (session::isAdmin()) { ?>
+    <div id="system_admin_menu">
+            <?php
+$blocks = layout::getBlock('blocks_top');
+                foreach ($blocks as $key => $val){
+                    echo $val;
+                }
 
 ?>
-        </div>
+
+    </div>
+    <?php } ?>
+    <div id="header">        
+        <?=template::getLogoHTML(array('width' => '48%', 'font' => 1)); ?>
+
     </div>
 
     <div id="sidebar_cheat">&nbsp;</div>

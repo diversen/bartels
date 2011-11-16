@@ -72,11 +72,8 @@ body {
 
 img#background {
     margin-left: 0%;
-
     width: 100%;
-    height: 100%;
     z-index: -1;
-    /* position:absolute; */
     color: white;
     position: fixed;
 
@@ -143,6 +140,8 @@ a:hover, a:active {
 
 
 #header {
+    position:fixed;
+    top: 0;
     margin-bottom: 0px;
     margin-left: 17%;
     margin-top: 3%;
@@ -314,3 +313,86 @@ img {
 #example1 {
     color: #ed078f;
 }
+
+#system_admin_menu							
+{ 
+    width: 800px; 
+    height: 400px; 
+
+
+} 
+
+
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: absolute; z-index: 1; list-style: none;}
+ul.dropdown li                      {  font-weight: bold; padding: 4px 8px;float: left;  background: #ccc;}
+ul.dropdown a:hover		            { color: #000; }
+ul.dropdown a:active                { color: #aaa; }
+ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid #333;
+	 								  color: #222; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: #aaa; color: black; position: relative; }
+ul.dropdown li.hover a              { color: black; }
+
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ list-style: none; width: 220px; visibility: hidden; position: absolute; top: 100%; left: -40px; }
+ul.dropdown ul li 					{ font-weight: normal; background: #f6f6f6; color: #000; 
+									  border-bottom: 1px solid #ccc; float: none; }
+									  
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+.filter  {
+    color: #aaa;
+    padding: 6px 6px 6px 2px;
+    margin-left: 20px;
+    text-align: left;
+    list-style-type:circle;
+    vertical-align:top;
+}
+
+#content {   
+    background-color: #000;
+    border:1px solid black;    
+    margin-left: 17%;
+    width: 38%;
+    top:25%;
+    position: absolute;
+    padding: 1em;
+    background: url("/templates/bartels/trans-black.png");
+    background-repeat: repeat;
+    color: #fff;
+    font: normal 13px Arial, Helvetica, sans-serif;
+}
+
+#content_image {
+     
+    margin: 10px 0px 10px 10px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+#event_image {
+
+    margin: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+}
+
+#toc {
+    font-size: 150%;
+}
+
+
