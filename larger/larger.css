@@ -252,7 +252,7 @@ a:hover, a:active {
     filter:alpha(opacity=75);
     /* CSS3 standard */
     opacity:0.75;
-    margin-left: 62%;
+    margin-left: 80%;
     width: 16%;
     position:absolute;
     top: 25%;
@@ -383,7 +383,7 @@ ul.dropdown li:hover > ul 			{ visibility: visible; }
     background-color: #000;
     border:1px solid black;    
     margin-left: 17%;
-    width: 38%;
+    width: 55%;
     top:25%;
     position: absolute;
     padding: 1em;
