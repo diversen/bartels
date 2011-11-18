@@ -37,17 +37,20 @@ echo template::getInlineCss();
 include_model ('gallery');
 $bg_image = gallery::getShiftingImageURL();
 
+
+
 ?>
 </head>
-    
+
+    <?php echo get_module_ini('bartels_use_main_menu'); ?>
 
 <body>
     <div id="background">
-<img id="background" src="<?php echo $bg_image;?>" />
+        <img id="background" src="<?php echo $bg_image;?>" />
     </div>
-<div id="page">
-    <?php if (session::isAdmin()) { ?>
-    <div id="system_admin_menu">
+    <div id="page">
+        <?php if (session::isAdmin()) { ?>
+        <div id="system_admin_menu">
 <?php
 
 $blocks = layout::getBlock('blocks_top');
@@ -57,14 +60,14 @@ foreach ($blocks as $key => $val){
 
 ?>
 
-    </div>
-    <?php } ?>
-    <div id="header">        
+        </div>
+        <?php } ?>
+        <div id="header">        
         <?=template::getLogoHTML(array('width' => '48%', 'font' => 1)); ?>
-    </div>
+        </div>
 
-    <div id="sidebar_cheat">&nbsp;</div>
-    <div id="sidebar_left">
+        <div id="sidebar_cheat">&nbsp;</div>
+        <div id="sidebar_left">
 
 <?php
 
@@ -74,29 +77,29 @@ foreach ($blocks as $key => $val){
 }
 
 ?>
-    </div>
-    <div id="sidebar_right">
+        </div>
+        <div id="sidebar_right">
         <?php
         
 
 
         ?>
-   </div>
-    <div id="content">
-        <div id="module_menu">
-<?php
-
-echo layout::getModuleMenu();
-
-?>
         </div>
-        <div id="system_message"><p>
-<?php
+        <div id="content">
+            <div id="module_menu">
+            <?php
 
-echo session::getActionMessage();
+            echo layout::getModuleMenu();
 
-?>
-        </p></div>
+            ?>
+            </div>
+            <div id="system_message">
+            <?php
+
+            echo session::getActionMessage();
+
+            ?>
+            </div>
 
 <?php
 
@@ -105,33 +108,30 @@ echo session::getActionMessage();
 /**
  * method for print footer of page
  */
-public static function printFooter(){
-
-
-?>
+public static function printFooter(){ ?>
         <div id="end_content">
-<?php
+        <?php
 
-echo template::getEndContent();
+        echo template::getEndContent();
 
-?>
+        ?>
+        </div>
+        </div>
+        <div id="footer">
         </div>
     </div>
-    <div id="footer">
-    </div>
-</div>
-<?php
+    <?php
 
-echo template::getEndHTML();
-echo template::getJs();
-echo template::getInlineJs();
+    echo template::getEndHTML();
+    echo template::getJs();
+    echo template::getInlineJs();
 
-?>
+    ?>
 </body>
 </html>
 <?php
-
-}
+    // end footer
+    }
 
 // end of class
 }
