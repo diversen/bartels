@@ -122,9 +122,8 @@ function view_error($message){
  *
  * @param  string   headline message to be printed
  */
-function headline_message($message){
-    echo "<!-- headline_message -->\n";
-    echo "<h1>\n";
+function headline_message($message, $size = "h2"){
+    echo "<$size>\n";
     echo "$message\n";
-    echo "</h1>\n";
+    echo "</$size>\n";
 }
