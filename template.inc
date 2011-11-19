@@ -10,7 +10,7 @@ class mainTemplate extends template {
  * @param  array    assoc array containing current page info
  */
 public static function printHeader(){ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<!doctype html>
 <html lang="<?=register::$vars['coscms_main']['lang']?>">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,33 +21,45 @@ public static function printHeader(){ ?>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans'],
+      families: ['Fontdiner Swanky'],
+      families: ['Nosifer Caps']
+      
+    }
+  });
+</script>
 
 <?php
 
 echo template::getMeta();
 
 template::setTemplateCss('bartels');
-template::setCss('http://fonts.googleapis.com/css?family=Droid+Sans');
-template::setCss('http://fonts.googleapis.com/css?family=Fontdiner+Swanky');
-//http://fonts.googleapis.com/css?family=Fontdiner+Swank
+//template::setCss('http://fonts.googleapis.com/css?family=Droid+Sans');
+//template::setCss('http://fonts.googleapis.com/css?family=Fontdiner+Swanky');
+template::setCss('http://fonts.googleapis.com/css?family=Nosifer+Caps');
+
+
 echo template::getCss();
 echo template::getInlineCss();
 
-include_model ('gallery');
-$bg_image = gallery::getShiftingImageURL();
-
-
+$bartels_bg_image = get_module_ini('bartels_bg_image');
+if ($bartels_bg_image) {
+    include_model ('gallery');
+    $bg_image = gallery::getShiftingImageURL();
+} else {
+    $bg_image =  '';
+}
 
 ?>
 </head>
-
-    <?php echo get_module_ini('bartels_use_main_menu'); ?>
-
 <body>
-    <div id="background">
+
         <img id="background" src="<?php echo $bg_image;?>" />
-    </div>
+
     <div id="page">
         <?php if (session::isAdmin()) { ?>
         <div id="system_admin_menu">
@@ -63,9 +75,17 @@ foreach ($blocks as $key => $val){
         </div>
         <?php } ?>
         <div id="header">        
-        <?=template::getLogoHTML(array('width' => '48%', 'font' => 1)); ?>
+        <?=template::getLogoHTML(array('width' => '48%')); ?>
+        
+            <?php if (get_module_ini('bartels_main_menu')) { ?>
+            <div id="main_menu">
+            <?php echo layout::getMainMenu(); ?>
+            </div>
+            <? } ?>
+        
         </div>
-
+        
+        
         <div id="sidebar_cheat">&nbsp;</div>
         <div id="sidebar_left">
 

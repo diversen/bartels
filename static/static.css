@@ -1,4 +1,5 @@
 @import url("../system_admin_menu.css");
+@import url("../main_menu.css");
 
 .smallfont {
     font-family: 'Droid Sans', sans-serif;
@@ -29,12 +30,6 @@ h1 {
     text-transform: uppercase;
 }
 
-code {
-    font-size: 90%;
-    color: #aaa;
-    margin: 4px;
-    background: #666;
-}
 
 #content_article {
     font-size: 120%;
@@ -84,10 +79,6 @@ img#background {
         position: fixed;
         top: 0;
         left: 0;
-
-
-
-
 }
 
 
@@ -103,11 +94,12 @@ body {
 }
 
 #logo_title {
-    font-family: 'Fontdiner Swanky', cursive;
-    text-transform: uppercase;
-    font-size: 500%;
-    position: absolute;
-    margin-top: 3%;
+
+    margin-top: 1%;
+    font-family: 'Droid Sans', sans-serif, cursive;
+
+    font-size: 700%;
+
 }
 
 p {
@@ -146,10 +138,11 @@ a:hover, a:active {
 }
 
 
-#header {
-    
-    margin-top: 0%;
+#header {   
+
     margin-left: 20%;
+    height: 400px;
+    width: 60%;
 }
 
 
@@ -183,7 +176,7 @@ a:hover, a:active {
     position: absolute;
     text-align: left;
     height: 0%;
-    top: 23%;
+    top:175px;
     color: #aaa;
    
 }
@@ -275,17 +268,21 @@ label {
     text-transform: uppercase;
 }
 
-code {
-    display:block;
+pre {
     background-color: #333;
+    
+}
+code {
+    display: inline-block;
     font-size:80%;
-    color: #eee;
+    color: #aea;
     margin: 2px;
 }
 
 img {
     border-style: none;
 }
+
 
 
 #footer {
@@ -317,7 +314,7 @@ img {
     border:1px solid black;    
     margin-left: 20%;
     width: 60%;
-    top:25%;
+    top:175px;
     position: absolute;
     padding: 1em;
     background: url("/templates/bartels/trans-black.png");
@@ -344,5 +341,3 @@ img {
     font-size: 120%;
 
 }
-
-
