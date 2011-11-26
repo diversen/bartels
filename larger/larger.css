@@ -159,14 +159,13 @@ a:hover, a:active {
 }
 
 
-#header {
+#header {   
 
-    margin-top: 0%;
-    margin-left: 17%;
-
-
-
+    margin-left: 20%;
+    height: 400px;
+    width: 60%;
 }
+
 
 
 #gallery_pager {

@@ -1,5 +1,6 @@
 <?php
 
+include_once "layout2.php";
 template::init('bartels');
 
 class mainTemplate extends template {
@@ -65,7 +66,9 @@ if ($bartels_bg_image) {
         <div id="system_admin_menu">
 <?php
 
-$blocks = layout::getBlock('blocks_top');
+include_once "layout.php";
+
+$blocks = layout2::getBlock('blocks_top');
 foreach ($blocks as $key => $val){
     echo $val;
 }
@@ -91,7 +94,7 @@ foreach ($blocks as $key => $val){
 
 <?php
 
-$blocks = layout::getBlock('blocks');
+$blocks = layout2::getBlock('blocks');
 foreach ($blocks as $key => $val){
     echo $val;
 }
@@ -109,7 +112,7 @@ foreach ($blocks as $key => $val){
             <div id="module_menu">
             <?php
 
-            echo layout::getModuleMenu();
+            echo layout2::getModuleMenu();
 
             ?>
             </div>
