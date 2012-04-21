@@ -47,7 +47,7 @@ template::setCss('http://fonts.googleapis.com/css?family=Nosifer+Caps');
 echo template::getCss();
 echo template::getInlineCss();
 
-$bartels_bg_image = get_module_ini('bartels_bg_image');
+$bartels_bg_image = config::getModuleIni('bartels_bg_image');
 if ($bartels_bg_image) {
     include_model ('gallery');
     $bg_image = gallery::getShiftingImageURL();
@@ -80,7 +80,7 @@ foreach ($blocks as $key => $val){
         <div id="header">        
         <?=template::getLogoHTML(array('width' => '48%')); ?>
         
-            <?php if (get_module_ini('bartels_main_menu')) { ?>
+            <?php if (config::getModuleIni('bartels_main_menu')) { ?>
             <div id="main_menu">
             <?php echo layout::getMainMenu(); ?>
             </div>
